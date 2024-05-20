@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Curriculum</title>
-            <meta>
-            <link rel="stylesheet" href="">
-        </head>
-        <body>
+<html>
+
+<head>
+    <title>Curriculum</title>
+    <meta>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* Estilo opcional para el mapa, ajusta el tamaño según sea necesario */
+        #map {
+            height: 400px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="About me">
+        <span class="highlight">
             <h1>Daniel Picon</h1>
-            <section class="Info"><h2>Informacion de Contacto</h2></section>
-            <section class="Educacion"><h2>Educacion</h2></section>
-            <section class="Exp"><h2>Experiencia</h2></section>
-            <section class="Skills"><h2>Habilidades</h2></section>
-            <section class="Projects"><h2>Proyectos</h2></section>
-            <section class="Certificates"><h2>Certificados y Logros</h2></section>
-            <section class="Referencias"><h2>Referencias</h2></section>
-            <nav>
-                <ul>
-                    <li><a href="Info">Informacion de Contacto</a></li>
-                    <li><a href="Educacion">Educacion</a></li>
-                    <li><a href="Exp">Experiencia</a></li>
-                    <li><a href="Skills">Habilidades</a></li>
-                    <li><a href="Projects">Proyectos</a></li>
-                    <li><a href="Certificates">Certificados y Logros</a></li>
-                    <li><a href="Referencias">Referencias</a></li>
-                </ul>
-            </nav>
-            <footer></footer>
-        </body>
-    </html>
+        </span>
+        <h2>Acerca de mi</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea distinctio odit aut ullam repellat, eos iure
+            quia et architecto neque voluptates sed minus a vero voluptatem quisquam, autem numquam eum.</p>
+    </div>
+    <section id="Info">
+        <h2>Informacion de Contacto</h2>
+        <a href="https://ec.linkedin.com/" target="_blank">URL a mi perfil de LinkedIn</a>
+    </section>
+    <section id="Educacion">
+        <h2>Educacion</h2>
+    </section>
+    <section id="Exp">
+        <h2>Experiencia</h2>
+        <ol>
+            <li>Laboratio Dexter 2019-2020</li>
+            <li>Acme Croporation 2021-2022</li>
+            <li>Ghost Busters 2023-Actualidad</li>
+        </ol>
+    </section>
+    <section id="Skills">
+        <h2>Habilidades</h2>
+    </section>
+    <section id="Projects">
+        <h2>Proyectos</h2>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Proyecto A</td>
+                    <td>Nombre del Proyecto A</td>
+                    <td>Descripción del Proyecto A</td>
+                    <td>20 de mayo de 2024</td>
+                </tr>
+                <tr>
+                    <td>Proyecto B</td>
+                    <td>Nombre del Proyecto B</td>
+                    <td>Descripción del Proyecto B</td>
+                    <td>21 de mayo de 2024</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <section id="Certificates">
+        <h2>Certificados y Logros</h2>
+    </section>
+    <section id="Referencias">
+        <h2>Referencias</h2>
+    </section>
+    <section id="Formulario">
+        <h2>Formulario de Contacto</h2>
+        <form action="/submit_form.php" method="post" style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; width: 300px; ">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="empresa">Empresa:</label><br>
+            <input type="text" id="empresa" name="empresa"><br><br>
+
+            <label for="motivo">Motivo:</label><br>
+            <select id="motivo" name="motivo">
+                <option value="consulta">Consulta</option>
+                <option value="solicitud">Solicitud</option>
+                <option value="queja">Queja</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+
+            <label for="contacto">Número de Contacto:</label><br>
+            <input type="tel" id="contacto" name="contacto" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Formato: 123-456-7890" required><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+    </section>
+    <section id="Media">
+        <h2>Multimedia de Proyectos</h2>
+        <div>
+            <h3>Proyecto 1</h3>
+            <img src="https://placehold.co/200x200?font=roboto" alt="">
+        </div>
+        <div>
+            <h3>Proyecto 2</h3>
+            <img src="https://placehold.co/200x200?font=roboto" alt="">
+        </div>
+    </section>
+    <section id="Map">
+        <h2>Mapa de trabajos</h2>
+        <div id="map"></div>
+
+        <script>
+            // Inicializa el mapa
+            var map = L.map('map').setView([40.7128, -74.0060], 12); // Ejemplo: Nueva York
+
+            // Añade una capa de mosaico (tile layer) de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Añade un marcador en la ubicación especificada
+            var marker = L.marker([40.7128, -74.0060]).addTo(map); // Ejemplo: Nueva York
+            marker.bindPopup("<b>Dexter Laboratory</b>").openPopup(); // Mensaje al hacer clic en el marcador
+        </script>
+
+    </section>
+
+    <nav>
+        <h2>Secciones</h2>
+        <ul>
+            <li><a href="#About me">Acerca de mi</a></li>
+            <li><a href="#Info">Informacion de Contacto</a></li>
+            <li><a href="#Educacion">Educacion</a></li>
+            <li><a href="#Exp">Experiencia</a></li>
+            <li><a href="#Skills">Habilidades</a></li>
+            <li><a href="#Projects">Proyectos</a></li>
+            <li><a href="#Certificates">Certificados y Logros</a></li>
+            <li><a href="#Referencias">Referencias</a></li>
+            <li><a href="#Formulario">Formulario de Contacto</a></li>
+            <li><a href="#Media">Multimedia de Proyectos</a></li>
+            <li><a href="#Map">Mapa de trabajos</a></li>
+        </ul>
+    </nav>
+    <footer></footer>
+</body>
+
+</html>
