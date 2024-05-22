@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.titulo2{
+    font-family: 'Times New Roman', serif;
+}
+
+h1{
+    font-family: Georgia, serif;
+}
+
+p{
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#Info{
+    background-color: #f3babc;
+}
+
+#Info > h2{
+    color: blue;
+}
+
+#Formulario{
+    background-color: #baf2e7;
+}
+
+#Formulario > form{
+    background-color: #f4f1c8;
+}
+
+#Projects table{
+    margin: 2px 1px 1.5px;
+    margin-top: 0.8rem;
+    border: 0.2pt dashed #827d7d;
+    padding: 2% 1.2%;   
+}
