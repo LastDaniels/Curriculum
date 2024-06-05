@@ -55,19 +55,19 @@ header {
 }
 
 header h1 {
-    margin: 10px;
+    flex: 0 0 30%;
     font-size: 24px;
 }
 
 header h2 {
-    margin: 50px;
+    flex: 0 0 30%;
     font-size: 18px;
     font-weight: normal;
 
 }
 
 .description p {
-    margin: 0;
+    flex: 0 0 30%;
     font-size: 14px;
     color: #666;
 }
