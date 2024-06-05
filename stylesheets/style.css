@@ -1,11 +1,17 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family: "Amethysta", serif;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.titulo2{
-    font-family: 'Times New Roman', serif;
+h2{
+    font-size: 1.5rem;
 }
-
 h1{
     font-family: Georgia, serif;
 }
@@ -17,19 +23,19 @@ p{
 }
 
 #Info{
-    background-color: #f3babc;
+    background-color: #cccccc;
 }
 
-#Info > h2{
+h2{
     color: blue;
 }
 
 #Formulario{
-    background-color: #baf2e7;
+    background-color: #999999;
 }
 
 #Formulario > form{
-    background-color: #f4f1c8;
+    background-color: #fffff3;
 }
 
 #Projects table{
@@ -37,4 +43,103 @@ p{
     margin-top: 0.8rem;
     border: 0.2pt dashed #827d7d;
     padding: 2% 1.2%;   
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #b4bdc0;
+}
+
+header h1 {
+    margin: 10px;
+    font-size: 24px;
+}
+
+header h2 {
+    margin: 50px;
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+.description p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+section {
+    margin-bottom: 20px;
+    background-color: #cccccc;
+}
+section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+.contact p {
+    margin: 0;
+    color: #666;
+}
+.interests2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.interests ul {
+    padding-left: 20px;
+}
+
+.interests ul li {
+    list-style-type: disc;
+}
+
+.interests ul {
+    margin: 0;
+    padding: 0;
+}
+.interests ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.interests ul li i {
+    margin-right: 10px;
+}
+
+.imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#Media img{
+    width: 50%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+} 
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.habilidad i {
+    font-size: 20px;
+}
+
+#Media h3{
+    border-bottom:  1px solid #cccccc;
 }

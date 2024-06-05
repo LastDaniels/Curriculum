@@ -3,156 +3,192 @@
 
 <head>
     <title>Curriculum</title>
-    <meta>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\stylesheets\style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amethysta&display=swap');
-        </style>
-    <link rel="stylesheet2" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Estilo opcional para el mapa, ajusta el tamaño según sea necesario */
         #map {
             height: 400px;
-            width: 50%;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div id="About me">
-        <span class="highlight">
-            <h1>Daniel Picon</h1>
-        </span>
-        <h2 class="titulo2">Acerca de mi</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea distinctio odit aut ullam repellat, eos iure
-            quia et architecto neque voluptates sed minus a vero voluptatem quisquam, autem numquam eum.</p>
+    <div class="container">
+        <div id="About me">
+            <header>
+                <h1>Daniel Picon</h1>
+                <h2 class="titulo2">Acerca de mi</h2>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea distinctio odit aut ullam repellat,
+                        eos
+                        iure quia et architecto neque voluptates sed minus a vero voluptatem quisquam, autem numquam
+                        eum.</p>
+                </div>
+            </header>
+        </div>
+        <section id="Info">
+            <h2 class="titulo2">Informacion de Contacto</h2>
+            <div class="contact">
+                <p>Address</p>
+                <p>0999876587</p>
+                <p>dpicon@espol.edu.ec</p>
+            </div>
+            <a href="https://ec.linkedin.com/" target="_blank">LinkedIn</a>
+        </section>
+        <section id="Educacion">
+            <h2 class="titulo2">Educacion</h2>
+            <ul>
+                <li>Escuela Elemental Abuelita Pepa 2004 - 2009</li>
+                <li>Unidad Educativa El Ateneo 2009 - 2019</li>
+                <li>Escuela Superior Politecnica del Litoral 2019 - Actualidad</li>
+            </ul>
+        </section>
+        <section id="Exp">
+            <h2 class="titulo2">Experiencia</h2>
+            <ol>
+                <li>Laboratio Dexter 2019-2020</li>
+                <li>Acme Croporation 2021-2022</li>
+                <li>Ghost Busters 2023-Actualidad</li>
+            </ol>
+        </section>
+        <section id="Skills">
+            <h2>Habilidades</h2>
+            <div class="habilidad"><i class="fab fa-python"></i> Python</div>
+            <div class="habilidad"><i class="fab fa-java"></i> Java</div>
+            <div class="habilidad"><i class="fab fa-vuejs"></i> Vue</div>
+            <div class="habilidad"><i class="fab fa-html5"></i> HTML</div>
+            <div class="habilidad"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="habilidad"><i class="fab fa-js"></i> JavaScript</div>
+        </section>
+        <section id="Projects">
+            <h2 class="titulo2">Proyectos</h2>
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Proyecto A</td>
+                        <td>Nombre del Proyecto A</td>
+                        <td>Descripción del Proyecto A</td>
+                        <td>20 de mayo de 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Proyecto B</td>
+                        <td>Nombre del Proyecto B</td>
+                        <td>Descripción del Proyecto B</td>
+                        <td>21 de mayo de 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section class="interests">
+            <h2>Interests</h2>
+            <ul class="interests2">
+                <li><i class="fas fa-gamepad"></i> Games</li>
+                <li><i class="fas fa-dumbbell"></i> Gym</li>
+                <li><i class="fas fa-code"></i> Web Development</li>
+            </ul>
+        </section>
+        <section id="Formulario">
+            <h2 class="titulo2">Formulario de Contacto</h2>
+            <form action="/submit_form.php" method="post"
+                style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; width: 300px; ">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="empresa">Empresa:</label><br>
+                <input type="text" id="empresa" name="empresa"><br><br>
+
+                <label for="motivo">Motivo:</label><br>
+                <select id="motivo" name="motivo">
+                    <option value="consulta">Consulta</option>
+                    <option value="solicitud">Solicitud</option>
+                    <option value="queja">Queja</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+
+                <label for="contacto">Número de Contacto:</label><br>
+                <input type="tel" id="contacto" name="contacto" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="Formato: 123-456-7890" required><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+        </section>
+        <section id="Media">
+            <h2 class="titulo2">Multimedia de Proyectos</h2>
+            <div>
+                <h3>Proyecto 1</h3>
+                <h4>Virtual Wallet</h4>
+                <div class="imagenes">
+                    <img src="images/6145997.jpg" alt="proyecto web">
+                </div>
+            </div>
+            <div>
+                <h3>Proyecto 2</h3>
+                <h4>Barber Shop Booking</h4>
+                <div class="imagenes">
+                    <img src="images/3889388.jpg" alt="Reserva">
+                </div>
+            </div>
+        </section>
+        <section id="Map">
+            <h2 class="titulo2">Mapa de trabajos</h2>
+            <div id="map"></div>
+            <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+            <script>
+                // Inicializar el mapa y establecer la vista inicial
+                var map = L.map('map').setView([-2.170998, -79.922359], 13);
+
+                // Añadir una capa de mapa (en este caso, OpenStreetMap)
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                // Añadir un marcador al mapa
+                var marker = L.marker([-2.170998, -79.922359]).addTo(map);
+                var marker2 = L.marker([-2.19, -79.95]).addTo(map);
+                var marker3 = L.marker([-2.10, -79.86]).addTo(map);
+
+                // Añadir un popup al marcador
+                marker.bindPopup("<b>Dexter Laboratory</b><br>Primer trabajo.").openPopup();
+                marker2.bindPopup("<b>Acme Croporation</b><br>Segundo trabajo.").openPopup();
+                marker3.bindPopup("<b>Ghost Busters</b><br>Tercer trabajo.").openPopup();
+            </script>
+
+        </section>
+
+        <nav>
+            <h2 class="titulo2">Secciones</h2>
+            <ul>
+                <li><a href="#About me">Acerca de mi</a></li>
+                <li><a href="#Info">Informacion de Contacto</a></li>
+                <li><a href="#Educacion">Educacion</a></li>
+                <li><a href="#Exp">Experiencia</a></li>
+                <li><a href="#Skills">Habilidades</a></li>
+                <li><a href="#Projects">Proyectos</a></li>
+                <li><a href="#Formulario">Formulario de Contacto</a></li>
+                <li><a href="#Media">Multimedia de Proyectos</a></li>
+                <li><a href="#Map">Mapa de trabajos</a></li>
+            </ul>
+        </nav>
+
+        <footer></footer>
     </div>
-    <section id="Info">
-        <h2 class="titulo2">Informacion de Contacto</h2>
-        <a href="https://ec.linkedin.com/" target="_blank">URL a mi perfil de LinkedIn</a>
-    </section>
-    <section id="Educacion">
-        <h2 class="titulo2">Educacion</h2>
-    </section>
-    <section id="Exp">
-        <h2 class="titulo2">Experiencia</h2>
-        <ol>
-            <li>Laboratio Dexter 2019-2020</li>
-            <li>Acme Croporation 2021-2022</li>
-            <li>Ghost Busters 2023-Actualidad</li>
-        </ol>
-    </section>
-    <section id="Skills">
-        <h2 class="titulo2">Habilidades</h2>
-    </section>
-    <section id="Projects">
-        <h2 class="titulo2">Proyectos</h2>
-        <table border="1px">
-            <thead>
-                <tr>
-                    <th>Proyecto</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Proyecto A</td>
-                    <td>Nombre del Proyecto A</td>
-                    <td>Descripción del Proyecto A</td>
-                    <td>20 de mayo de 2024</td>
-                </tr>
-                <tr>
-                    <td>Proyecto B</td>
-                    <td>Nombre del Proyecto B</td>
-                    <td>Descripción del Proyecto B</td>
-                    <td>21 de mayo de 2024</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </section>
-    <section id="Certificates">
-        <h2 class="titulo2">Certificados y Logros</h2>
-    </section>
-    <section id="Referencias">
-        <h2 class="titulo2">Referencias</h2>
-    </section>
-    <section id="Formulario">
-        <h2 class="titulo2">Formulario de Contacto</h2>
-        <form action="/submit_form.php" method="post" style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; width: 300px; ">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-
-            <label for="empresa">Empresa:</label><br>
-            <input type="text" id="empresa" name="empresa"><br><br>
-
-            <label for="motivo">Motivo:</label><br>
-            <select id="motivo" name="motivo">
-                <option value="consulta">Consulta</option>
-                <option value="solicitud">Solicitud</option>
-                <option value="queja">Queja</option>
-                <option value="otro">Otro</option>
-            </select><br><br>
-
-            <label for="contacto">Número de Contacto:</label><br>
-            <input type="tel" id="contacto" name="contacto" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Formato: 123-456-7890" required><br><br>
-
-            <input type="submit" value="Enviar">
-        </form>
-
-    </section>
-    <section id="Media">
-        <h2 class="titulo2">Multimedia de Proyectos</h2>
-        <div>
-            <h3>Proyecto 1</h3>
-            <img src="https://placehold.co/200x200?font=roboto" alt="">
-        </div>
-        <div>
-            <h3>Proyecto 2</h3>
-            <img src="https://placehold.co/200x200?font=roboto" alt="">
-        </div>
-    </section>
-    <section id="Map">
-        <h2 class="titulo2">Mapa de trabajos</h2>
-        <div id="map"></div>
-
-        <script>
-            // Inicializa el mapa
-            var map = L.map('map').setView([40.7128, -74.0060], 12); // Ejemplo: Nueva York
-
-            // Añade una capa de mosaico (tile layer) de OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            // Añade un marcador en la ubicación especificada
-            var marker = L.marker([40.7128, -74.0060]).addTo(map); // Ejemplo: Nueva York
-            marker.bindPopup("<b>Dexter Laboratory</b>").openPopup(); // Mensaje al hacer clic en el marcador
-        </script>
-
-    </section>
-
-    <nav>
-        <h2 class="titulo2">Secciones</h2>
-        <ul>
-            <li><a href="#About me">Acerca de mi</a></li>
-            <li><a href="#Info">Informacion de Contacto</a></li>
-            <li><a href="#Educacion">Educacion</a></li>
-            <li><a href="#Exp">Experiencia</a></li>
-            <li><a href="#Skills">Habilidades</a></li>
-            <li><a href="#Projects">Proyectos</a></li>
-            <li><a href="#Certificates">Certificados y Logros</a></li>
-            <li><a href="#Referencias">Referencias</a></li>
-            <li><a href="#Formulario">Formulario de Contacto</a></li>
-            <li><a href="#Media">Multimedia de Proyectos</a></li>
-            <li><a href="#Map">Mapa de trabajos</a></li>
-        </ul>
-    </nav>
-    <footer></footer>
 </body>
 
 </html>
